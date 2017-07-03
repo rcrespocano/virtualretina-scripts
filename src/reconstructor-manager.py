@@ -24,11 +24,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     if args.data is None:
-        raise 'ERROR: the arg --data is mandatory [Path of the input data]'
+        raise TypeError('ERROR: the arg --data is mandatory [Path of the input data]')
     if args.fps is None:
-        raise 'ERROR: the arg --fps is mandatory [Frames per second (fps)]'
+        raise TypeError('ERROR: the arg --fps is mandatory [Frames per second (fps)]')
     if args.ppd is None:
-        raise 'ERROR: the arg --ppd is mandatory [Pixels per degree (ppd)]'
+        raise TypeError('ERROR: the arg --ppd is mandatory [Pixels per degree (ppd)]')
 
     # Parameters
     data_path = os.path.join(args.data, '')
