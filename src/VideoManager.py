@@ -8,7 +8,8 @@ def build_video(_output_folder, _output_video_ext, _file_pattern, _file_ext, _fp
     # Video codec
     _fourcc = cv2.VideoWriter_fourcc(*'XVID')
 
-    _image_list = [f for f in listdir(_output_folder) if isfile(join(_output_folder, f)) and f.find(_file_ext) > 0]
+    _image_list = [f for f in listdir(_output_folder) if isfile(join(_output_folder, f))
+                   and f.find(_file_pattern) >= 0 and f.find(_file_ext) > 0]
     _image_list.sort()
 
     # Video writer
